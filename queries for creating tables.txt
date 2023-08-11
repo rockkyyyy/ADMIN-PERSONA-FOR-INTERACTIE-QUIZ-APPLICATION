@@ -1,0 +1,41 @@
+// creating users
+
+CREATE TABLE IF NOT EXISTS users (
+        username VARCHAR(255) NOT NULL ,
+        password VARCHAR(255) NOT NULL,
+	emailid VARCHAR(255) NOT NULL ,
+        role VARCHAR(255) NOT NULL
+            );
+
+// creating test 
+
+CREATE TABLE IF NOT EXISTS test (
+quizname VARCHAR(255) NOT NULL description VARCHAR (255) NOT NULL,
+quizid VARCHAR(255) NOT NULL,
+q1 VARCHAR(255) NOT NULL,
+q1op1 VARCHAR(255) NOT NULL,
+q1op2 VARCHAR (255) NOT NULL,
+q1op3 VARCHAR(255) NOT NULL ,
+q1crtopt VARCHAR (255) NOT NULL,
+q2 VARCHAR (255) NOT NULL,
+q2op1 VARCHAR(255) NOT NULL,
+q2op2 VARCHAR (255) NOT NULL,
+q2op3 VARCHAR (255) NOT NULL,
+q2crtopt VARCHAR (255) NOT NULL,
+q3TF VARCHAR (255) NOT NULL,
+q3TFcrtopt VARCHAR(255) NOT NULL,
+q4TF VARCHAR (255) NOT NULL,
+q4TFcrtopt VARCHAR (255) NOT NULL,
+level VARCHAR(255) NOT NULL
+);
+
+
+// creating teams
+
+
+CREATE TABLE IF NOT EXISTS teams (
+        team_member1_username VARCHAR(255) NOT NULL,
+	team_member2_username VARCHAR(255) NOT NULL,
+	teamid VARCHAR(255) NOT NULL ,
+        level_of_quiz_need_to_participate VARCHAR(255) NOT NULL
+            );

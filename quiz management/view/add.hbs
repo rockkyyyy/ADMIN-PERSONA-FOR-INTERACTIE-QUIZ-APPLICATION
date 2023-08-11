@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <form action="/addstudent"  >
+   <h3>ADD QUIZ</h3>
+   
+    <hr>
+
+    <label for="name"><b>Quiz name</b></label>
+    <input type="text" placeholder="Enter unique quiz Name" name="name" id="name" required>
+
+    <label for="phn"><b>description</b></label>
+    <input type="text" placeholder="Enter description" name="phone" id="phone" required>
+
+    <label for="eml-id"><b>QUIZ Id</b></label>
+    <input type="text" placeholder="Enter unique Id" name="email" id="email" required>
+   
+   <label for="eml-id"><b>QUESTION - 1</b></label>
+    <input type="text" placeholder="Enter QUESTION - 1" name="extra1" id="extra1" required>
+   
+<label for="eml-id"><b>QUESTION - 1 OPTION - 1</b></label>
+    <input type="text" placeholder="Enter QUESTION - 1 OPTION - 1" name="extra2" id="extra2" required>
+
+<label for="eml-id"><b>QUESTION - 1 OPTION - 2</b></label>
+    <input type="text" placeholder="Enter QUESTION - 1 OPTION - 2" name="extra3" id="extra3" required>
+
+<label for="eml-id"><b>QUESTION - 1 OPTION - 3</b></label>
+    <input type="text" placeholder="Enter QUESTION - 1 OPTION - 3" name="extra4" id="extra4" required>
+
+<label for="eml-id"><b>CORRECT OPTION FOR QUESTION - 1 </b></label>
+    <input type="text" placeholder="Enter CORRECT OPTION FOR QUESTION - 1 " name="extra5" id="extra5" required>
+
+  <label for="eml-id"><b>QUESTION - 2</b></label>
+    <input type="text" placeholder="Enter QUESTION - 2" name="extra6" id="extra6" required>
+   
+<label for="eml-id"><b>QUESTION - 2 OPTION - 1</b></label>
+    <input type="text" placeholder="Enter QUESTION - 2 OPTION - 1" name="extra7" id="extra7" required>
+
+<label for="eml-id"><b>QUESTION - 2 OPTION - 2</b></label>
+    <input type="text" placeholder="Enter QUESTION - 2 OPTION - 2" name="extra8" id="extra8" required>
+
+<label for="eml-id"><b>QUESTION - 2 OPTION - 3</b></label>
+    <input type="text" placeholder="Enter QUESTION - 2 OPTION - 3" name="extra9" id="extra9" required>
+
+<label for="eml-id"><b>CORRECT OPTION FOR QUESTION - 2 </b></label>
+    <input type="text" placeholder="Enter CORRECT OPTION FOR QUESTION - 2 " name="extra10" id="extra10" required>
+
+  
+<label for="eml-id"><b>QUESTION - 3 (True/False) </b></label>
+    <input type="text" placeholder="Enter QUESTION - 3" name="extra11" id="extra11" required>
+
+<label for="eml-id"><b>QUESTION - 3 ANSWER </b></label>
+    <input type="text" placeholder="Enter ANSWER IN CAPITAL LETTERS (ex- TRUE)" name="extra12" id="extra12" required>
+ 
+<label for="eml-id"><b>QUESTION - 4 (True/False) </b></label>
+    <input type="text" placeholder="Enter QUESTION - 4" name="extra13" id="extra13" required>
+
+<label for="eml-id"><b>QUESTION - 4 ANSWER </b></label>
+    <input type="text" placeholder="Enter ANSWER IN CAPITAL LETTERS (ex- TRUE)" name="extra14" id="extra14" required>
+
+   
+  <div class="gender_g">
+     <strong>level</strong>
+     <input type="radio" name="gender" id="" value="EASY"> EASY
+     <input type="radio" name="gender" id=""  value="HARD"> HARD
+  </div>
+    <button type="submit" class="registerbtn">ADD USER</button>
+
+  
+    <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
+     
+     {{#if mesg}}
+     <h3>Data Inserted</h3>
+     {{/if}}
+
+      {{#if checkmesg}}
+     <h3>Quizid or Quizname already present!</h3>
+     {{/if}}
+</form>
+</div>
+</body>
+</html>

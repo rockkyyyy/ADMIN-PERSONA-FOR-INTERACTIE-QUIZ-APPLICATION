@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add TEAM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <form action="/addstudent"  >
+   <h3>ADD TEAM</h3>
+   
+    <hr>
+
+    <label for="name"><b>Team member1 username (leader)</b></label>
+    <input type="text" placeholder="Enter team member1 username" name="name" id="name" required>
+
+    <label for="phn"><b>Team member2 username</b></label>
+    <input type="text" placeholder="Enter team member2 username" name="phone" id="phone" required>
+
+    <label for="eml-id"><b>TEAM Id</b></label>
+    <input type="text" placeholder="Enter TEAM Id" name="email" id="email" required>
+   
+  <div class="gender_g">
+     <strong>Level of quiz need to be participated</strong>
+     <input type="radio" name="gender" id="" value="EASY"> EASY
+     <input type="radio" name="gender" id=""  value="HARD">  HARD
+  </div>
+    <button type="submit" class="registerbtn">ADD TEAM</button>
+
+  
+    <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
+     
+     {{#if mesg}}
+     <h3>Data Inserted</h3>
+     {{/if}}
+
+      {{#if checkmesg}}
+     <h3>Teamid or username already present!</h3>
+     {{/if}}
+</form>
+</div>
+</body>
+</html>

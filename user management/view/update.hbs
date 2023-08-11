@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="">
+      <form action="/updatesearch">
+   <h3>SEARCH USER</h3>
+   
+    <hr>
+ 
+    <label for="name"><b>User Name</b></label>
+    <input type="text" style="width:200px;" placeholder="type username to be searched" name="name" id="name" required>
+
+    <button type="submit" class="registerbtn">SEACRH USER</button>
+    <a href="./" style="color:black">BACK TO HOME PAGE</a>
+
+    <br>
+   
+ {{#if umesg}}
+     <h3>Data updated!</h3>
+     {{/if}}
+
+     
+     {{#if mesg2}}
+     <h3>Data Not Found!</h3>
+     {{/if}}
+    </form>
+  </div>
+
+<!--Search form design end-->
+
+{{#if mesg1}}
+       <div class="container">
+       <form action="/updatestudent"  >
+   <h3>UPDATE STUDENT</h3>
+   
+    <hr>
+{{#data}}
+    <label for="name"><b>USER name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" value="{{username}}" id="name" required>
+
+    <label for="phn"><b>password</b></label>
+    <input type="phone" placeholder="Enter password" name="phone" value="{{password}}" id="phone" required>
+
+    <label for="eml-id"><b>Email Id</b></label>
+    <input type="email" placeholder="Enter Email Id" name="email" value="{{emailid}}" id="email" required readonly>
+   
+  <div class="gender_g">
+     <strong>Role</strong>
+     <input type="radio" name="gender" id="" value="admin"> admin
+     <input type="radio" name="gender" id=""  value="user">  user
+  </div>
+    <button type="submit" class="registerbtn">UPDATE USER</button>
+
+{{/data}}
+  
+    <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
+     
+    
+</form>
+</div>
+     
+      {{/if}}      
+</body>
+</html>

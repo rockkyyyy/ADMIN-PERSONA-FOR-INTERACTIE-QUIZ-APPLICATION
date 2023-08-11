@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="">
+      <form action="/updatesearch">
+   <h3>SEARCH QUIZ</h3>
+   
+    <hr>
+ 
+    <label for="email"><b>QUIZ ID</b></label>
+    <input type="text" style="width:200px;" placeholder="type QUIZID to be searched" name="email" id="email" required>
+
+    <button type="submit" class="registerbtn">SEACRH QUIZ</button>
+    <a href="./" style="color:black">BACK TO HOME PAGE</a>
+
+    <br>
+   
+ {{#if umesg}}
+     <h3>Data updated!</h3>
+     {{/if}}
+
+     
+     {{#if mesg2}}
+     <h3>Data Not Found!</h3>
+     {{/if}}
+    </form>
+  </div>
+
+<!--Search form design end-->
+
+{{#if mesg1}}
+       <div class="container">
+       <form action="/updatestudent"  >
+   <h3>UPDATE QUIZ</h3>
+   
+    <hr>
+{{#data}}
+    
+   
+    <label for="name"><b>Quiz name</b></label>
+    <input type="text" placeholder="Enter unique quiz Name" name="name"  value="{{quizname}}" id="name" required readonly>
+
+    <label for="phn"><b>description</b></label>
+    <input type="text" placeholder="Enter description" name="phone" value="{{description}}" id="phone" required>
+
+    <label for="eml-id"><b>QUIZ Id</b></label>
+    <input type="text" placeholder="Enter unique Id" name="email" value="{{quizid}}" id="email" required readonly>
+   
+   <label for="eml-id"><b>QUESTION - 1</b></label>
+    <input type="text" placeholder="Enter QUESTION - 1" name="extra1" value="{{q1}}" id="extra1" required>
+   
+<label for="eml-id"><b>QUESTION - 1 OPTION - 1</b></label>
+    <input type="text" placeholder="Enter QUESTION - 1 OPTION - 1" name="extra2"   value="{{q1op1}}" id="extra2" required>
+
+<label for="eml-id"><b>QUESTION - 1 OPTION - 2</b></label>
+    <input type="text" placeholder="Enter QUESTION - 1 OPTION - 2" name="extra3"  value="{{q1op2}}"  id="extra3" required>
+
+<label for="eml-id"><b>QUESTION - 1 OPTION - 3</b></label>
+    <input type="text" placeholder="Enter QUESTION - 1 OPTION - 3" name="extra4" value="{{q1op3}}"  id="extra4" required>
+
+<label for="eml-id"><b>CORRECT OPTION FOR QUESTION - 1 </b></label>
+    <input type="text" placeholder="Enter CORRECT OPTION FOR QUESTION - 1 " name="extra5"  value="{{q1crtopt}}" id="extra5" required>
+
+  <label for="eml-id"><b>QUESTION - 2</b></label>
+    <input type="text" placeholder="Enter QUESTION - 2" name="extra6"  value="{{q2}}" id="extra6" required>
+   
+<label for="eml-id"><b>QUESTION - 2 OPTION - 1</b></label>
+    <input type="text" placeholder="Enter QUESTION - 2 OPTION - 1" name="extra7"  value="{{q2op1}}" id="extra7" required>
+
+<label for="eml-id"><b>QUESTION - 2 OPTION - 2</b></label>
+    <input type="text" placeholder="Enter QUESTION - 2 OPTION - 2" name="extra8" value="{{q2op2}}" id="extra8" required>
+
+<label for="eml-id"><b>QUESTION - 2 OPTION - 3</b></label>
+    <input type="text" placeholder="Enter QUESTION - 2 OPTION - 3" name="extra9" value="{{q2op3}}" id="extra9" required>
+
+<label for="eml-id"><b>CORRECT OPTION FOR QUESTION - 2 </b></label>
+    <input type="text" placeholder="Enter CORRECT OPTION FOR QUESTION - 2 " name="extra10" value="{{q2crtopt}}" id="extra10" required>
+
+  
+<label for="eml-id"><b>QUESTION - 3 (True/False) </b></label>
+    <input type="text" placeholder="Enter QUESTION - 3" name="extra11" id="extra11" value="{{q3TF}}" required>
+
+<label for="eml-id"><b>QUESTION - 3 ANSWER </b></label>
+    <input type="text" placeholder="Enter ANSWER IN CAPITAL LETTERS (ex- TRUE)" name="extra12" value="{{q3TFcrtopt}}" id="extra12" required>
+ 
+<label for="eml-id"><b>QUESTION - 4 (True/False) </b></label>
+    <input type="text" placeholder="Enter QUESTION - 4" name="extra13" id="extra13" value="{{q4TF}}" required>
+
+<label for="eml-id"><b>QUESTION - 4 ANSWER </b></label>
+    <input type="text" placeholder="Enter ANSWER IN CAPITAL LETTERS (ex- TRUE)" name="extra14" value="{{q4TFcrtopt}}" id="extra14" required>
+
+   
+  <div class="gender_g">
+     <strong>level</strong>
+     <input type="radio" name="gender" id="" value="EASY"> EASY
+     <input type="radio" name="gender" id=""  value="HARD"> HARD
+  </div>
+    <button type="submit" class="registerbtn">UPDATE QUIZ</button>
+{{/data}}
+  
+    <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
+     
+    
+</form>
+</div>
+     
+      {{/if}}      
+</body>
+</html>

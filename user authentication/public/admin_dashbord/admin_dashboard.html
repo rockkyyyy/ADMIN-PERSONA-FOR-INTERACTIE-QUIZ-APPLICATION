@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Welcome to the Admin Dashboard</h1>
+        
+        <div class="sections">
+            <div class="section">
+                <h2>USER MANAGEMENT</h2>
+                <a href="./create_quiz/create_quiz.html">Go to User Management</a>
+            </div>
+            
+            <div class="section">
+                <h2>QUIZ MANAGEMENT</h2>
+                <a href="./edit_quiz/edit_quiz.html">Go to QUIZ MANAGEMENT</a>
+            </div>
+            
+            <div class="section">
+                <h2>TEAMs MANAGEMENT</h2>
+                <a href="./existing_quizes/existing_quizes.html">Go to TEAMs MANAGEMENT</a>
+            </div>
+            
+            
+        </div>
+    </div>
+    <script>
+        const response = await fetch('/admin/', {
+        method: 'POST',
+        
+    });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

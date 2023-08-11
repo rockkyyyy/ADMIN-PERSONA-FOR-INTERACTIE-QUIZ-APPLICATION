@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="">
+      <form action="/updatesearch">
+   <h3>SEARCH TEAM</h3>
+   
+    <hr>
+ 
+    <label for="eml-id"><b>TEAM Id</b></label>
+    <input type="text" placeholder="Enter TEAM Id to be searched" name="email" id="email" required>
+   
+    <button type="submit" class="registerbtn">SEACRH TEAM</button>
+    <a href="./" style="color:black">BACK TO HOME PAGE</a>
+
+    <br>
+   
+ {{#if umesg}}
+     <h3>Data updated!</h3>
+     {{/if}}
+
+     
+     {{#if mesg2}}
+     <h3>Data Not Found!</h3>
+     {{/if}}
+    </form>
+  </div>
+
+<!--Search form design end-->
+
+{{#if mesg1}}
+       <div class="container">
+       <form action="/updatestudent"  >
+   <h3>UPDATE STUDENT</h3>
+   
+    <hr> 
+{{#data}}
+    <label for="name"><b>Team member1 username (leader)</b></label>
+    <input type="text" placeholder="Enter team member1 username" name="name" value="{{team_member1_username}}" id="name" required>
+
+    <label for="phn"><b>Team member2 username</b></label>
+    <input type="text" placeholder="Enter team member2 username" name="phone" value="{{team_member2_username}}" id="phone" required>
+
+    <label for="eml-id"><b>TEAM Id</b></label>
+    <input type="text" placeholder="Enter TEAM Id" name="email" value="{{teamid}}" id="email" required readonly>
+   
+  <div class="gender_g">
+     <strong>Level of quiz need to be participated</strong>
+     <input type="radio" name="gender" id="" value="EASY"> EASY
+     <input type="radio" name="gender" id=""  value="HARD">  HARD
+  </div>
+    <button type="submit" class="registerbtn">UPDATE TEAM</button>
+
+{{/data}}
+  
+    <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
+     
+    
+</form>
+</div>
+     
+      {{/if}}      
+</body>
+</html>
